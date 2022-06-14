@@ -20,6 +20,6 @@ $result = $blog->getById($_GET['id']);
   <p>カテゴリ:<?php echo $blog->setCategoryName($result['category']) ?></p>
   <hr>
   <p>本文:<?php echo $result['content'] ?></p>
-  <p><a href="/index2.php">前のページへ戻る</a></p>
+  <p><a href="/index.php">前のページへ戻る</a></p>
 </body>
 </html>
