@@ -22,6 +22,12 @@ protected function dbConnect() {
   $pass   = DB_PASS;
   $dsn    = "mysql:host=$host;dbname=$dbname;charset=utf8";
 
+  $options = array(
+    PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+    PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
+    PDO::MYSQL_ATTR_USE_BUFFERED_QUERY =>true,
+  );
+
   
   try {
       $dbh = new PDO($dsn,$user,$pass,[
