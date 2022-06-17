@@ -16,6 +16,7 @@ Class Dbc
 // 引数:なし
 //　返り値:接続結果を返す
 protected function dbConnect() {
+  $db = parse_url($_SERVER['CLEARDB_DATABASE_URL']);
   $host   = DB_HOST;
   $dbname = DB_NAME;
   $user   = DB_USER;
